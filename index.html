@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body ng-app="ngInnovation" >
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12" ng-controller="homeController">
+                <div class="header">
+                    Mock Your App
+                </div>
+                <form role="form" ng-submit="onUpload()">
+                    <div class="form-group">
+                        <label for="projectName">
+                            Application Name
+                        </label>
+                        <input type="text" class="form-control" ng-model="appName" id="projectName" />
+                    </div>
+                    <div class="form-group">
+                        <label for="inputFile">
+                            Schema File
+                        </label>
+                        <input type="file" class="form-control-file" demo-file-model="myFile" id="inputFile" />
+                        <p class="help-block">
+                           Please provide your schema 
+                        </p>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        Submit
+                    </button>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="components/home.controller.js?x=0009"></script>
+    <script src="components/file.directive.js"></script>
+    
+</body>
+</html>
